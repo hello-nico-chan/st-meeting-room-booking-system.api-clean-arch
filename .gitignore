@@ -1,0 +1,13 @@
+.vs/
+.vscode/
+*.user
+
+bin/
+obj/
+
+*.log
+
+**/Migrations/*.Designer.cs
+
+TestResults/
+*.coverage
