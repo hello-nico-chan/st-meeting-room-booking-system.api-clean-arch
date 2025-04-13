@@ -1,4 +1,5 @@
 using System.Text;
+using MeetingRoom.Api.Middlewares;
 using MeetingRoom.DependencyInjection.ServiceCollectionExtensions;
 using MeetingRoom.Shared.Constants;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -45,6 +46,8 @@ builder.Services
 builder.Services.AddCors();
 
 var app = builder.Build();
+
+app.UseMiddleware<GlobalExceptionMiddleware>();
 
 if (app.Environment.IsDevelopment())
 {
